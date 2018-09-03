@@ -86,6 +86,7 @@ public class CalculateAge {
             Remain_month = 12;
         }else {
             if (Today_year == getBirth_year()){
+
                 int d = Birth_day, m = Birth_month;
                 if (d < Today_day){
                     d = d+31;

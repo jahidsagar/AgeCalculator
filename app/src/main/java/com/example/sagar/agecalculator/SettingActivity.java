@@ -21,7 +21,7 @@ public class SettingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (Notification.isChecked() == true){
-                    Toast.makeText(this , "checked",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext() , "checked",Toast.LENGTH_SHORT).show();
                 }else {
 
                 }

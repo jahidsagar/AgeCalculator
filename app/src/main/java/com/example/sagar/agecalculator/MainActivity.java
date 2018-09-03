@@ -164,7 +164,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 );
 
                 calculateAge.Calculate();
-                calanderWork.SetCalender(calculateAge.getNext_Year() , calculateAge.getBirth_month()-1 , calculateAge.getBirth_day());
+                CalanderWork calanderWork_getNext = new CalanderWork();
+                calanderWork_getNext.SetCalender(calculateAge.getNext_Year() , calculateAge.getBirth_month()-1 , calculateAge.getBirth_day());
+//                calanderWork.SetCalender(calculateAge.getNext_Year() , calculateAge.getBirth_month()-1 , calculateAge.getBirth_day());
                 calculateAge.Calculate_Next();
 
                 valueSet.ValueofText( //this method used for set calculation value
@@ -178,8 +180,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         String.valueOf(calculateAge.getAgeDay()),
                         String.valueOf(calculateAge.getAgeMonth()),
                         String.valueOf(calculateAge.getAgeYear()),
-                        calanderWork.MonthName()+" "+calculateAge.getBirth_day()+" , "+calculateAge.getNext_Year() ,
-                        calanderWork.DayofWeek(),
+                        calanderWork_getNext.MonthName()+" "+calculateAge.getBirth_day()+" , "+calculateAge.getNext_Year() ,
+                        calanderWork_getNext.DayofWeek(),
                         String.valueOf(calculateAge.getRemain_month()),
                         String.valueOf(calculateAge.getRemain_day())
                 );
